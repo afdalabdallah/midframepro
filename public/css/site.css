@@ -1,0 +1,116 @@
+html {
+    font-size: 14px;
+  }
+  
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    margin-bottom: 60px;
+  }
+  
+  .card {
+      z-index:2;
+      transition: transform .3s;
+      border-radius: 10px;
+      box-shadow: 5px 5px rgb(252, 212, 212);
+  }
+  
+  .card:hover{
+      cursor: pointer;
+      transform: scale(1.05);
+  }
+  
+  .input_box {
+      color: black;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      border-radius: 5px;
+      line-height: 22px;
+      background-color: transparent;
+      border: 2px solid #CC6666;
+      transition: all 0.3s;
+      padding: 13px;
+      margin-bottom: 15px;
+      width: 100%;
+      box-sizing: border-box;
+      outline: 0;
+  }
+  
+  .comment_box {
+      color: black;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      height:150px;
+      font-size: 18px;
+      border-radius: 5px;
+      line-height: 22px;
+      background-color: transparent;
+      border: 2px solid #CC6666;
+      transition: all 0.3s;
+      padding: 13px;
+      margin-bottom: 15px;
+      width: 100%;
+      box-sizing: border-box;
+      outline: 0;
+  }
+  
+  [type="submit"] {
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      width: 100%;
+      background: #CC6666;
+      border-radius: 5px;
+      border: 0;
+      cursor: pointer;
+      color: white;
+      font-size: 24px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      transition: all 0.3s;
+      margin-top: -4px;
+      font-weight: 700;
+  }
+  
+      [type="submit"]:hover {
+          background: #CC4949;
+      }
+  
+  .contact-us {
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      text-align: center;
+      color: white;
+  }
+  
+  .service-img{
+      width:50%;
+      margin:auto;
+  }
+  
+  .service-card{
+      text-align: center;
+      transition: .5s;
+      cursor: pointer;
+      background-color: white;
+  }
+  
+  .service-card:hover {
+      transition: .3s;
+      cursor: pointer;
+      background-color:rgb(245, 146, 146) ;
+  }
+  
+  .profile-card {
+      border-radius:16px;
+      padding:10px;
+      text-align: center;
+      background-color: white;
+  }

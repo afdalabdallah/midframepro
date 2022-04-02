@@ -1,0 +1,78 @@
+body { background:rgb(30,30,40); padding-top: 50px;}
+            form { max-width:360px; margin: auto;}
+            label{
+              color: white;
+              font-family: Helvetica, Arial, sans-serif;
+              font-size: 18px;
+              font-weight: 500;
+            }
+            .data-input{
+                color: white;
+                font-family: Helvetica, Arial, sans-serif;
+                font-weight:500;
+                /* margin: auto; */
+                font-size: 18px;
+                border-radius: 5px;
+                line-height: 22px;
+                background-color: transparent;
+                border:2px solid #CC6666;
+                transition: all 0.3s;
+                padding: 13px;
+                margin-bottom: 15px;
+                width:100%;
+                box-sizing: border-box;
+                outline:0;
+            }
+            .email-input{
+                color: white;
+                font-family: Helvetica, Arial, sans-serif;
+                font-weight:500;
+                font-size: 18px;
+                border-radius: 5px;
+                line-height: 22px;
+                background-color: transparent;
+                border:2px solid #CC6666;
+                transition: all 0.3s;
+                padding: 13px;
+                margin-bottom: 15px;
+                width:100%;
+                box-sizing: border-box;
+                outline:0;
+            }
+           
+            [type="submit"] {
+                font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+                width: 100%;
+                background:#CC6666;
+                border-radius:5px;
+                border:0;
+                cursor:pointer;
+                color:white;
+                font-size:24px;
+                padding-top:10px;
+                padding-bottom:10px;
+                transition: all 0.3s;
+                margin-top:-4px;
+                font-weight:700;
+                margin: auto;
+            }
+            [type="submit"]:hover { background:#CC4949; }
+            .contact-us{
+                font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+                text-align: center;
+                color: white;
+            }
+            input[type=text]:focus, input[type=password]:focus {
+              background-color: rgb(23, 23, 24);
+              outline: none;
+            }
+            .visibility{
+              /* background-image: url('/vis2.png'); */
+              margin-left: 5px;
+              border: 0px;
+              padding: 0px;
+              background:rgb(30,30,40);
+              /* background-size: 25px 16px;  */
+              width: 25px;
+              height: 16px;
+          }
