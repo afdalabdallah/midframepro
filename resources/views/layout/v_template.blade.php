@@ -26,7 +26,7 @@
                
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link text-dark" href="/" >Home</a>
                         </li>
                         <li class="nav-item">
@@ -41,8 +41,17 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" href="/collaboration">Collaboration</a>
                         </li>
-        
                     </ul>
+                </div>
+                <div>
+                  <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                      <a class="nav-link text-dark"  href="/signin">Sign In</a>
+                    </li>
+                    <li class="nav-item" style="background-color: pink; border-radius:12px">
+                        <a class="nav-link text-dark" href="/signup">Sign Up</a>
+                    </li>
+                  </ul>
                 </div>
             </div>
         </nav>

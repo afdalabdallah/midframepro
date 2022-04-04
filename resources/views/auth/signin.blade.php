@@ -40,7 +40,7 @@
                     
                     <div style="display: flex; margin-top: 20px;color: white;">
                         <div class="line" style="margin-right: 20px;"></div>
-                        Belum punya akun?
+                        Make an account
                         <dif class="line" style="margin-left:20px;"></dif>
                     </div>
                     <div style="margin-top: 20px;">
