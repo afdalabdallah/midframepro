@@ -28,7 +28,7 @@ Route::get('/company', [HomeController::class,'showCompany']);
 
 Route::get('/collaboration', [HomeController::class,'showCollaboration']);
 
-Route::post('/signup', [UserController::class,'insert']);
+// Route::post('/signup', [UserController::class,'insert']);
 Auth::routes();
 
 Route::get('/reg',[HomeController::class,'register']);

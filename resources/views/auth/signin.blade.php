@@ -13,14 +13,25 @@
         <main>
             <div style="margin:50px; margin-top: 130px;">
                 <h1 style="text-align: center;color: white;">Sign In</h1>
-                <form id="form_style" method="post">
+                <form method="POST" action="{{ route('login') }}" id="form_style">
+                    @csrf
                     <div>
-                        <lable class="form-lable">Username</lable>
-                        <input class="input-box" type="text" name="username" autofocus required>
+                        <lable class="form-lable">Email</lable>
+                        <input class="input-box" type="Email"  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autofocus required>
+                        @error('email')
+                            <span class="invalid-feedback" role="alert" style="color:white">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>  
                     <div>
                         <label class="form-lable">Password:</label>
-                        <input class="input-box" type="password" id="pass_Input" name="password" autofocus required>
+                        <input class="input-box" type="password" id="password" @error('password') is-invalid @enderror" name="password" autofocus required>
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                         
                     </div> 
                     <div>
@@ -30,10 +41,13 @@
                     </div>
                     
                     <!-- <input type="checkbox" onclick="togglePass()"> -->
-                    <a href="sign.html" style="text-decoration: none; float: right;margin-top: 5px;color: white;">Lupa password?</a>
+                    @if (Route::has('password.request'))
+                        <a href="{{ route('password.request') }}" style="text-decoration: none; float: right;margin-top: 5px;color: white;">Forgot your password?</a>
+                    @endif
+                   
                     <div style="margin-top: 40px;">
                         <button class="clicked">
-                            Masuk
+                            Sign in
                         </button>
                     </div>
                         

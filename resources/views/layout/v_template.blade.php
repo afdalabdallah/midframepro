@@ -44,14 +44,33 @@
                     </ul>
                 </div>
                 <div>
-                  <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                      <a class="nav-link text-dark"  href="/signin">Sign In</a>
-                    </li>
-                    <li class="nav-item" style="background-color: pink; border-radius:12px">
-                        <a class="nav-link text-dark" href="/signup">Sign Up</a>
-                    </li>
-                  </ul>
+                  @guest
+                    <ul class="navbar-nav flex-grow-1">
+                      <li class="nav-item">
+                        <a class="nav-link text-dark"  href="/signin">Sign In</a>
+                      </li>
+                      <li class="nav-item" style="background-color: pink; border-radius:12px">
+                          <a class="nav-link text-dark" href="/signup">Sign Up</a>
+                      </li>
+                    </ul>
+                  @endguest
+                  @auth
+                    <span>
+                        {{ Auth::user()->firstName }}
+                    </span>
+
+                    <div>
+                        <a  href="{{ route('logout') }}"
+                          onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                  @endauth
                 </div>
             </div>
         </nav>
