@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,30 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class,'showWelcome']);
 
-Route::get('/signup', function () {
-    return view('auth.signup');
-});
+Route::get('/signup', [HomeController::class,'showSignup'])->name('signup');
 
-Route::get('/signin', function () {
-    return view('auth.signin');
-});
+Route::get('/signin', [HomeController::class,'showSignin']);
 
-Route::get('/service', function () {
-    return view('v_service');
-});
+Route::get('/service', [HomeController::class,'showService']);
 
-Route::get('/profile', function () {
-    return view('v_profile');
-});
+Route::get('/profile', [HomeController::class,'showProfile']);
 
-Route::get('/company', function () {
-    return view('v_company');
-});
+Route::get('/company', [HomeController::class,'showCompany']);
 
-Route::get('/collaboration', function () {
-    return view('v_collaboration');
-});
+Route::get('/collaboration', [HomeController::class,'showCollaboration']);
+
+// Route::post('/signup', [UserController::class,'insert']);
+Auth::routes();
+
+Route::get('/reg',[HomeController::class,'register']);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
