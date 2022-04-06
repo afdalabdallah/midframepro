@@ -1,3 +1,5 @@
+
+
 function togglePass(){
     var x = document.getElementById("password");
     var y = document.getElementById("password-confirmation");
@@ -21,4 +23,8 @@ function changeVis(){
     } else {
        image.setAttribute('src', "vis2.png");
     }
+}
+
+function serviceDirect(){
+    alert("Please Sign In first before making an appointment");
 }
