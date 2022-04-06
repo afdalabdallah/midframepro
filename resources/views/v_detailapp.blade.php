@@ -2,24 +2,31 @@
 @section('title','Details')
 
 @section('content')
-    <table>
-        <thead>
-            <tr>
-                <th>Message</th>
-                <th>Department</th>
-                <th>Doctor</th>
-                <th>Date</th>
-            </tr>
-        </thead>
-    <tbody>
-        @foreach ($app as $data)
+<div style="padding: 15px">
+    <h2>Appointment Details</h2>
+    <table class="table table-bordered table-striped table-hover">
         <tr>
-            <td>{{ $data->message }}</td>
-            <td>{{ $data->s_name}}</td>
-            <td>{{ $data->d_name }}</td>
-            <td>{{ $data->date }}</td>
+            <th>Name</th>
+            <td>{{$app->name}}</th>
         </tr>
-        @endforeach
-    </tbody>
+        <tr>
+            <th>Date</th>
+            <td>{{$app->date}}</th>
+        </tr>
+        <tr>
+            <th>Department</th>
+            <td>{{ $app->s_name}}</th>
+        </tr>
+        <tr>
+            <th>Doctor</th>
+            <td>{{ $app->d_name }}</th>
+        </tr>
+        <tr>
+            <th>Message</th>
+            <td>{{ $app->message }}</th>
+        </tr>
     </table>
+    <a href="/account" class="btn btn-primary">Back</a>
+</div>
+    
 @endsection

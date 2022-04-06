@@ -224,7 +224,7 @@ h1, h2, h3, h4, h5, h6 {
 .appointment .php-email-form textarea {
   padding: 10px 12px;
 }
-.appointment .php-email-form .sub {
+/* .appointment .php-email-form .sub {
   background: #c03f3f;
   border: 0;
   padding: 10px 35px;
@@ -234,4 +234,4 @@ h1, h2, h3, h4, h5, h6 {
 }
 .appointment .php-email-form .sub:hover {
   background: #ff0037;
-}
+} */
