@@ -55,10 +55,10 @@
                     <div style="display: flex; margin-top: 20px;color: white;">
                         <div class="line" style="margin-right: 20px;"></div>
                         Make an account
-                        <dif class="line" style="margin-left:20px;"></dif>
+                        <div class="line" style="margin-left:20px;"></div>
                     </div>
                     <div style="margin-top: 20px;">
-                        <button class="clicked_sign" type="button" onclick="window.location.href='./signup'">
+                        <button class="clicked_sign" type="button" onclick="window.location.href='/signup'">
                             Sign Up
                         </button>
                     </div>

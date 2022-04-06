@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\AccController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,9 +30,16 @@ Route::get('/company', [HomeController::class,'showCompany']);
 
 Route::get('/collaboration', [HomeController::class,'showCollaboration']);
 
-// Route::post('/signup', [UserController::class,'insert']);
 Auth::routes();
 
 Route::get('/reg',[HomeController::class,'register']);
 
+Route::get('/appointment',[AppointmentController::class,'appointment']);
+
+Route::post('/appointment',[AppointmentController::class,'createData']);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/account',[AccController::class,'account']);
+
+Route::get('/account/detail/{id}',[AccController::class,'detail']);
