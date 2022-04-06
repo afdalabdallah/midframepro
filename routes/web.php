@@ -40,4 +40,12 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/appointment', [HomeController::class,'showAppointment']);
+Route::get('/account',[AccController::class,'account'])->name('account');
+
+Route::get('/account/detail/{id}',[AccController::class,'detail']);
+
+Route::get('/account/detail/edit/{id}',[AppointmentController::class,'edit']);
+
+Route::post('/account/detail/update/{id}',[AppointmentController::class,'update']);
+
+Route::get('/account/delete/{id}',[AccController::class,'delete']);

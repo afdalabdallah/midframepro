@@ -28,3 +28,7 @@ function changeVis(){
 function serviceDirect(){
     alert("Please Sign In first before making an appointment");
 }
+
+function deleteAlert(){
+    alert("Are you sure you want to delete this appointment?");
+}

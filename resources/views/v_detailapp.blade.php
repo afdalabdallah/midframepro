@@ -16,7 +16,7 @@
         <tr>
             <td>{{ $data->message }}</td>
             <td>{{ $data->s_name}}</td>
-            <td>{{ $data->name }}</td>
+            <td>{{ $data->d_name }}</td>
             <td>{{ $data->date }}</td>
         </tr>
         @endforeach

@@ -14,6 +14,7 @@ class Appointment extends Authenticatable
 
     protected $fillable = [
         'id',
+        'name',
         'date',
         'phoneNumber',
         'message',
@@ -29,9 +30,19 @@ class Appointment extends Authenticatable
         $appointment =  DB::table('appointment')
                         ->join('doctor', 'appointment.d_id','=', 'doctor.id')
                         ->join('specialization', 'doctor.specialization_id','=','specialization.id')
-                        ->select('doctor.name', 'specialization.s_name', 'appointment.*')
+                        ->select('doctor.name as d_name', 'specialization.s_name', 'appointment.*')
                         ->where('appointment.id',$id);
        return $appointment->get();
+    }
+
+    public function deleteData($id){
+        $deleted = DB::table('appointment')->where('id', '=', $id)->delete();
+    }
+
+
+    public function editData($id,$data){
+        DB::table('appointment')->where('id', $id)->update($data);
+        return redirect()->route('account');
     }
 
 }

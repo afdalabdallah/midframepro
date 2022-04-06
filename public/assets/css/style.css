@@ -136,12 +136,11 @@ h1, h2, h3, h4, h5, h6 {
 * Appointment Button
 */
 .appointment-btn {
-  margin-left: 25px;
+  margin-right: 0px;
   background: #c03f3f;
   color: #fff;
   border-radius: 4px;
   padding: 8px 25px;
-  white-space: nowrap;
   transition: 0.3s;
   font-size: 14px;
   display: inline-block;
@@ -225,7 +224,7 @@ h1, h2, h3, h4, h5, h6 {
 .appointment .php-email-form textarea {
   padding: 10px 12px;
 }
-.appointment .php-email-form button[type=submit] {
+.appointment .php-email-form .sub {
   background: #c03f3f;
   border: 0;
   padding: 10px 35px;
@@ -233,6 +232,6 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.4s;
   border-radius: 50px;
 }
-.appointment .php-email-form button[type=submit]:hover {
+.appointment .php-email-form .sub:hover {
   background: #ff0037;
 }
