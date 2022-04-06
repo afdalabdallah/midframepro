@@ -29,6 +29,10 @@ class HomeController extends Controller
     {
         return view('v_company');
     }
+    public function showAppointment()
+    {
+        return view('appointment');
+    }
     public function showCollaboration()
     {
         return view('v_collaboration');
@@ -45,8 +49,7 @@ class HomeController extends Controller
     {
         return view('auth.register');
     }
-    
-
+   
     /**
      * Create a new controller instance.
      *
