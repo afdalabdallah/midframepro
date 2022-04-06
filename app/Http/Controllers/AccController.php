@@ -26,7 +26,8 @@ class AccController extends Controller
         return view('v_account', ['app'=>$appointment]);
     }
     public function detail($id){
-        return view('v_detailapp', ['app'=>$this->Appointment->detailData($id)]);
+        $app = $this->Appointment->detailData($id);
+        return view('v_detailapp', ['app'=>$app]);
     }
     public function delete($id){
         $this->Appointment->deleteData($id);

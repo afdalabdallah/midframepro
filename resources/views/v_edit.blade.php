@@ -64,8 +64,8 @@
             <div class="error-message"></div>
         </div> --}}
        <div style="display: flex">
-           <button class="btn-primary" type="submit" style="width: 50%;height:50px">Save Changes</button>
-           <button class="btn-warning" type="button" onclick="window.location.href='/account'" style="margin-left: 5px;width: 50%; border-radius:4px">Cancel</button>
+           <button class="btn btn-primary" type="submit" style="width: 50%;height:50px">Save Changes</button>
+           <button class="btn btn-warning" type="button" onclick="window.location.href='/account'" style="margin-left: 5px;width:50%">Cancel</button>
        </div>
        
     </form>

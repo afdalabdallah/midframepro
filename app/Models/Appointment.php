@@ -32,7 +32,7 @@ class Appointment extends Authenticatable
                         ->join('specialization', 'doctor.specialization_id','=','specialization.id')
                         ->select('doctor.name as d_name', 'specialization.s_name', 'appointment.*')
                         ->where('appointment.id',$id);
-       return $appointment->get();
+       return $appointment->get()->first();
     }
 
     public function deleteData($id){
@@ -44,5 +44,6 @@ class Appointment extends Authenticatable
         DB::table('appointment')->where('id', $id)->update($data);
         return redirect()->route('account');
     }
+
 
 }

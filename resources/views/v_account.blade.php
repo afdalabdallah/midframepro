@@ -46,8 +46,7 @@
                 </button>
                 </div>
                 <div class="modal-body">
-                Appointment <br>
-                {{$data->date}} with {{$data->d_name}}<br>
+                Appointment <br> with {{$data->d_name}} <br> at {{$data->date}}<br>
                 Do you want to delete this appointment?
                 </div>
                 <div class="modal-footer">

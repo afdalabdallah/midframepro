@@ -40,10 +40,10 @@
       
       <div class="col-md-4 form-group mt-3">
         <label for="department">Department</label>
-        <select id="department" class="form-select">
+        <select id="department" class="form-select" onchange="if (this.selectedIndex) testing(this.selectedIndex);">
           <option value="">Select Department</option>
           @foreach ($department as $data)
-            <option value="">{{ $data->s_name }}</option>
+            <option value="{{ $data->id }}">{{ $data->s_name }}</option>
           @endforeach
         </select>
       </div>
@@ -53,12 +53,11 @@
         <select name="doctor" id="doctor" class="form-select">
           <option value="">Select Doctor</option>
           @foreach ($doctor as $data)
-            <option value="{{ $data->name }}" >{{ $data->name }}</option>
+            <option value="{{ $data->name }}" class="{{$data->specialization_id}}">{{ $data->name }}</option>
           @endforeach
         </select>
       </div>
     </div>
-
     <div class="form-group mt-3">
       <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
     </div>
