@@ -67,7 +67,8 @@
       <div class="error-message"></div>
       <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
     </div>
-    <div class="text-center"><button type="submit">Make an Appointment</button></div>
+    <div class="text-center"><button type="submit" class="sub">Make an Appointment</button></div>
+
   </form>
 
 </div>

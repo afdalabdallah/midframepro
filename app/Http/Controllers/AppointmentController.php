@@ -37,19 +37,42 @@ class AppointmentController extends Controller
             'date' => Request()->date,
             'phoneNumber' => Request()->phoneNumber,
             'message' => Request()->message,
+            'name' => Request()->name,
             'p_id' => $p_id,
             'd_id' => $d_id
         ];
         $this->Appointment->createData($data);
-        $p_id = Auth::id();
-        // $appointment =  DB::table('appointment')->where('p_id', $p_id);
+        return redirect()->route('account');
+    }
+    
+    public function edit($id){
+        $doctor =  DB::table('doctor');
+        $doctor = $doctor->get();
+        $department =  DB::table('specialization');
+        $department = $department->get();
+
+        $e_id = $id;
         $appointment =  DB::table('appointment')
-                        ->join('doctor', 'appointment.d_id','=', 'doctor.id')
-                        ->join('specialization', 'doctor.specialization_id','=','specialization.id')
-                        ->select('doctor.name', 'specialization.s_name', 'appointment.*')
-                        ->where('appointment.p_id',$p_id);
-        $appointment = $appointment->get();
-        return view('v_account', ['app'=>$appointment]);
+        ->join('doctor', 'appointment.d_id','=', 'doctor.id')
+        ->join('specialization', 'doctor.specialization_id','=','specialization.id')
+        ->select('doctor.name as d_name', 'specialization.s_name', 'appointment.*')
+        ->where('appointment.id',$e_id);
+        $appointment = $appointment->get()->first();
+        return view('v_edit')->with(['app'=>$appointment])->with(['dep'=>$department])->with(['doctor'=>$doctor]);
+    }
+
+    public function update($id){
+        $doctor = Request()->doctor;
+        $d_id = DB::table('doctor')->where('name', $doctor)->value('id');
+        $data = [
+            'date' => Request()->date,
+            'phoneNumber' => Request()->phoneNumber,
+            'message' => Request()->message,
+            'name' => Request()->name,
+            'd_id' => $d_id
+        ];
+        $this->Appointment->editData($id,$data);
+        return redirect()->route('account');
     }
 
 }

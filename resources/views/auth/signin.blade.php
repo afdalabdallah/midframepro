@@ -16,8 +16,8 @@
                 <form method="POST" action="{{ route('login') }}" id="form_style">
                     @csrf
                     <div>
-                        <lable class="form-lable">Email</lable>
-                        <input class="input-box" type="Email"  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autofocus required>
+                        <lable class="form-lable" for="email">Email</lable>
+                        <input class="input-box" type="Email"  @error('email') is-invalid @enderror" name="email" required autofocus required>
                         @error('email')
                             <span class="invalid-feedback" role="alert" style="color:white">
                                 <strong>{{ $message }}</strong>
