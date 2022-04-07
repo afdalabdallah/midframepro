@@ -27,8 +27,8 @@ return new class extends Migration
         Schema::create('doctor', function (Blueprint $table) {
             $table->integer('id')->unique();
             $table->string('name');
-            $table->integer('specialization_id')->usigned();
-            $table->foreign('specialization_id')->references('id')->on('users');
+            $table->integer('specialization_id');
+            // $table->foreign('specialization_id')->references('id')->on('users');
         });
         Schema::create('specialization', function (Blueprint $table) {
             $table->integer('id')->unique();
@@ -39,10 +39,10 @@ return new class extends Migration
             $table->string('name');
             $table->dateTime('date');
             $table->string('email');
-            $table->integer('p_id')->unsigned();
-            $table->integer('d_id')->unsigned();
-            $table->foreign('p_id')->references('id')->on('users');
-            $table->foreign('d_id')->references('id')->on('doctor');
+            $table->integer('p_id');
+            $table->integer('d_id');
+            // $table->foreign('p_id')->references('id')->on('users');
+            // $table->foreign('d_id')->references('id')->on('doctor');
             $table->string('phoneNumber');
             $table->string('message')->nullable();
         });
@@ -73,8 +73,29 @@ return new class extends Migration
                 'specialization_id' => 2
             ],
         ];
+        $specialization = [
+            [
+                'id' => 1,
+                's_name' => 'Oncology' 
+            ],
+            [
+                'id' => 2,
+                's_name' => 'Orthopedy' 
+            ],
+            [
+                'id' => 3,
+                's_name' => 'ENT' 
+            ],
+            [
+                'id' => 4,
+                's_name' => 'Policlinic' 
+            ]
+        ];
         foreach($doctor as $data){
             DB::table('doctor')->insert($data);
+        }
+        foreach($specialization as $data){
+            DB::table('specialization')->insert($data);
         }
         
     }
