@@ -27,7 +27,7 @@ return new class extends Migration
         Schema::create('doctor', function (Blueprint $table) {
             $table->integer('id')->unique();
             $table->string('name');
-            $table->integer('specialization_id');
+            $table->integer('specialization_id')->usigned();
             $table->foreign('specialization_id')->references('id')->on('users');
         });
         Schema::create('specialization', function (Blueprint $table) {
@@ -39,8 +39,8 @@ return new class extends Migration
             $table->string('name');
             $table->dateTime('date');
             $table->string('email');
-            $table->integer('p_id');
-            $table->integer('d_id');
+            $table->integer('p_id')->unsigned();
+            $table->integer('d_id')->unsigned();
             $table->foreign('p_id')->references('id')->on('users');
             $table->foreign('d_id')->references('id')->on('doctor');
             $table->string('phoneNumber');
