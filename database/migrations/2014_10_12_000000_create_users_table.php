@@ -17,13 +17,30 @@ return new class extends Migration
             $table->id();
             $table->string('firstName');
             $table->string('lastName');
-            // $table->string('phoneNumber');
-            // $table->string('address');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+        });
+        Schema::create('doctor', function (Blueprint $table) {
+            $table->integer('id');
+            $table->string('name');
+            $table->integer('specialization_id');
+        });
+        Schema::create('specialization', function (Blueprint $table) {
+            $table->integer('id');
+            $table->string('s_name');
+        });
+        Schema::create('appointment', function (Blueprint $table) {
+            $table->string('id');
+            $table->string('name');
+            $table->dateTime('date');
+            $table->string('email');
+            $table->integer('p_id');
+            $table->integer('d_id');
+            $table->string('phoneNumber');
+            $table->string('message')->nullable();
         });
     }
 

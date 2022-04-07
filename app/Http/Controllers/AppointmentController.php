@@ -38,6 +38,7 @@ class AppointmentController extends Controller
             'phoneNumber' => Request()->phoneNumber,
             'message' => Request()->message,
             'name' => Request()->name,
+            'email' => Request()->email,
             'p_id' => $p_id,
             'd_id' => $d_id
         ];

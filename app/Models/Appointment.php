@@ -16,6 +16,7 @@ class Appointment extends Authenticatable
         'id',
         'name',
         'date',
+        'email',
         'phoneNumber',
         'message',
         'p_id',

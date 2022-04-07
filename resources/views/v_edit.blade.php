@@ -21,7 +21,7 @@
         
         <div class="col-md-4 form-group mt-3 mt-md-0">
             <label for="email">Email</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" value="" >
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" value="{{$app->email}}" >
         </div>
         
         <div class="col-md-4 form-group mt-3 mt-md-0">
