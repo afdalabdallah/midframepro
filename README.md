@@ -1,4 +1,4 @@
-##To run from github clone:
+## To run from github clone:
 **Make sure composer is already installed**
 - Clone the project
 - Run ‘composer install’ in terminal
