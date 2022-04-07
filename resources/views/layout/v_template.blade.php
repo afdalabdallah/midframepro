@@ -197,7 +197,14 @@
             Service
           </h6>
           <p>
-            <a href="#!" class="text-reset">Appointments</a>
+            <a href="
+            @guest
+              /signin
+            @endguest
+            @auth
+              /appointment
+            @endauth
+            " class="text-reset">Appointments</a>
           </p>
           <p>
             <a href="#!" class="text-reset">Check Up</a>
