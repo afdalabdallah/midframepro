@@ -87,5 +87,8 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+        Schema::dropIfExists('appointment');
+        Schema::dropIfExists('doctor');
+        Schema::dropIfExists('specialization');
     }
 };
