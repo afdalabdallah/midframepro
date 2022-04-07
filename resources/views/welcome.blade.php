@@ -10,7 +10,7 @@
         <div style="position:relative; top:-470px; left:1000px; width:300px; text-align:center; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
             <p style="color:black; font-size:32px">Medika Clinic</p>
             <p style="color:black; font-size:28px">Providing the best specialist</p>
-            <a style="background-color:red; font-weight:bold" href="/q1/service" class=btn>Get Started</a>
+            <a style="background-color:red; font-weight:bold" href="/service" class=btn>Get Started</a>
 
             </div>
         </div>
