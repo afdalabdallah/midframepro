@@ -10,6 +10,14 @@
             <td>{{$app->name}}</th>
         </tr>
         <tr>
+            <th>Phone Number</th>
+            <td>{{$app->phoneNumber}}</th>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{$app->email}}</th>
+        </tr>
+        <tr>
             <th>Date</th>
             <td>{{$app->date}}</th>
         </tr>
